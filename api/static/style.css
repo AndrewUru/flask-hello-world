@@ -22,7 +22,7 @@ body::before {
   top: -100px;
   left: -100px;
   width: 300%;
-  height: 10%;
+  height: 100%;
   background: radial-gradient(circle, rgba(0, 115, 177, 0.3), transparent 70%);
   animation: moveBackground 15s linear infinite;
   z-index: -1;
