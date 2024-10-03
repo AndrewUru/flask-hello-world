@@ -22,7 +22,7 @@ body::before {
   top: -100px;
   left: -100px;
   width: 300%;
-  height: 300%;
+  height: 10%;
   background: radial-gradient(circle, rgba(0, 115, 177, 0.3), transparent 70%);
   animation: moveBackground 15s linear infinite;
   z-index: -1;
@@ -54,8 +54,8 @@ body::before {
 /* Estilos del header */
 header {
   text-align: center;
-  height: 75vh;
-  margin-bottom: 60px; /* Mayor separación entre el header y el contenido */
+  height: 40vh;
+  margin-bottom: 25px; /* Mayor separación entre el header y el contenido */
 }
 
 h1 {
