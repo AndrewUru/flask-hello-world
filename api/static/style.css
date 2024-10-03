@@ -96,6 +96,11 @@ p {
   margin-bottom: 60px;
 }
 
+.section .eg {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 /* Diseño de dos columnas para tecnologías */
 .tech-grid {
   display: grid;
