@@ -16,6 +16,12 @@ body {
   padding: 20px;
 }
 
+/* Estilos del header */
+header {
+  text-align: center; /* Centra el contenido dentro del header */
+  margin-bottom: 30px;
+}
+
 /* Contenedor principal */
 .container {
   background-color: #ffffff;
