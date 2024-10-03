@@ -129,3 +129,88 @@ footer {
   font-size: 1rem;
   color: #888;
 }
+
+/* Media Queries para responsive design */
+
+/* Para pantallas de tamaño medio (tablets, laptops pequeños) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr; /* Cambiar a una columna */
+    gap: 30px;
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  header {
+    height: auto; /* Ajustar la altura del header */
+    padding-bottom: 20px;
+  }
+
+  .tech-item {
+    padding: 20px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
+  }
+
+  .tech-item {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
