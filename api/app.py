@@ -31,6 +31,14 @@ def login():
     auth_url = f"{AUTH_URL}?response_type=code&client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&scope=r_ads"
     return redirect(auth_url)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')  # Sobre la herramienta
+
+@app.route('/example')
+def example():
+    return render_template('example.html')  # Página de ejemplo
+
 @app.route('/callback')
 def callback():
     # Obtener el código de autorización de la URL
