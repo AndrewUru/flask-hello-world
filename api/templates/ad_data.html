@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos de Anuncios</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Resultados de Anuncios de LinkedIn</h1>
+    <ul>
+      {% for ad in ad_data %}
+      <li>
+        <strong>ID del Anuncio:</strong> {{ ad.id }} <br>
+        <strong>Título:</strong> {{ ad.title }} <br>
+        <strong>Descripción:</strong> {{ ad.description }}
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="btn" href="/">Volver al inicio</a>
+  </div>
+</body>
+
+</html>

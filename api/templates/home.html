@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - LinkedIn Ad Library</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>LinkedIn Ad Library Viewer</h1>
+      <p>Visualiza anuncios publicados en LinkedIn utilizando la API de LinkedIn, Flask y Python.</p>
+      <a class="btn" href="/login">Iniciar sesión con LinkedIn</a>
+    </header>
+
+    <main>
+      <!-- Explicación del proyecto -->
+      <section class="section">
+        <h2>¿De qué se trata este proyecto?</h2>
+        <p>Este proyecto es una aplicación web que utiliza varias tecnologías modernas para permitir a los usuarios ver
+          datos de anuncios publicados en LinkedIn. A través de la autenticación OAuth, los usuarios pueden iniciar
+          sesión con LinkedIn, y luego acceder a la biblioteca de anuncios usando la API de LinkedIn Ad Library.</p>
+      </section>
+
+      <!-- Tecnologías utilizadas -->
+      <section class="section">
+        <h2>Tecnologías utilizadas</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <h3>Python</h3>
+            <p>Python es el lenguaje de programación principal utilizado en este proyecto. La aplicación está construida
+              con Flask, un micro-framework de Python para aplicaciones web.</p>
+          </div>
+          <div class="tech-item">
+            <h3>Flask</h3>
+            <p>Flask se utiliza para manejar las rutas, autenticación y la lógica backend. Permite la integración con la
+              API de LinkedIn y procesa las solicitudes de los usuarios.</p>
+          </div>
+          <div class="tech-item">
+            <h3>API de LinkedIn</h3>
+            <p>La API de LinkedIn Ad Library permite acceder a datos de anuncios publicados en LinkedIn. A través de
+              OAuth, los usuarios pueden autenticar su cuenta y acceder a esta información.</p>
+          </div>
+          <div class="tech-item">
+            <h3>Next.js</h3>
+            <p>Next.js es un framework de React que se utiliza en la parte del frontend para manejar el contenido
+              dinámico y las interfaces del usuario de forma rápida y eficiente.</p>
+          </div>
+          <div class="tech-item">
+            <h3>OAuth 2.0</h3>
+            <p>El protocolo de autenticación OAuth 2.0 se usa para permitir a los usuarios iniciar sesión en LinkedIn de
+              manera segura, proporcionando un token de acceso para interactuar con la API.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flujo de trabajo -->
+      <section class="section">
+        <h2>Flujo de trabajo del proyecto</h2>
+        <ol>
+          <li>El usuario hace clic en el botón "Iniciar sesión con LinkedIn".</li>
+          <li>Se redirige al usuario a la página de autenticación de LinkedIn a través de OAuth 2.0.</li>
+          <li>Después de autenticarse, el usuario es redirigido de vuelta a la aplicación con un token de acceso.</li>
+          <li>El backend en Flask utiliza el token de acceso para hacer solicitudes a la API de LinkedIn y recuperar los
+            datos de los anuncios.</li>
+          <li>Los datos de los anuncios se muestran al usuario en la interfaz web.</li>
+        </ol>
+      </section>
+
+      <!-- Cómo funciona la autenticación -->
+      <section class="section">
+        <h2>¿Cómo funciona la autenticación con LinkedIn?</h2>
+        <p>Este proyecto utiliza OAuth 2.0 para la autenticación. Los usuarios son redirigidos a la página de LinkedIn,
+          donde deben otorgar permisos para acceder a la información de su cuenta. Una vez autenticado, LinkedIn
+          devuelve un token de acceso que se utiliza para realizar solicitudes autenticadas a la API de LinkedIn.</p>
+      </section>
+
+      <!-- Cómo utilizar la aplicación -->
+      <section class="section">
+        <h2>Cómo utilizar la aplicación</h2>
+        <p>Para comenzar, haz clic en "Iniciar sesión con LinkedIn". Una vez autenticado, podrás visualizar los anuncios
+          publicados en LinkedIn.</p>
+        <a class="btn" href="/login">Iniciar sesión con LinkedIn</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LinkedIn Ad Library Viewer. Proyecto desarrollado con Python, Flask, y la API de LinkedIn.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
