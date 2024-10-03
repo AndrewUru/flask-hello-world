@@ -67,7 +67,7 @@ body::before {
 }
 
 .navbar ul li {
-  margin: 0 15px;
+  margin: 0 18px;
 }
 
 .navbar ul li a {
@@ -84,7 +84,7 @@ body::before {
 /* Estilos del header */
 header {
   text-align: center;
-  height: 40vh;
+
   margin-bottom: 25px; /* Mayor separación entre el header y el contenido */
 }
 
