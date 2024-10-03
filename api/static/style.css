@@ -54,6 +54,7 @@ body::before {
 /* Estilos del header */
 header {
   text-align: center;
+  height: 75vh;
   margin-bottom: 60px; /* Mayor separación entre el header y el contenido */
 }
 
