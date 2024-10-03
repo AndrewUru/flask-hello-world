@@ -9,47 +9,71 @@
 body {
   background-color: #f4f7f6;
   color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  height: 100vh;
   padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Estilos del header */
-header {
-  text-align: center; /* Centra el contenido dentro del header */
-  margin-bottom: 30px;
+/* Fondo animado */
+body::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 115, 177, 0.3), transparent 70%);
+  animation: moveBackground 15s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 /* Contenedor principal */
 .container {
   background-color: #ffffff;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 60px;
+  border-radius: 15px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
+  margin: 40px auto;
 }
 
-/* Encabezado */
+/* Estilos del header */
+header {
+  text-align: center;
+  margin-bottom: 60px; /* Mayor separación entre el header y el contenido */
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #0073b1;
   margin-bottom: 20px;
   text-align: center;
 }
 
 p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 /* Botón centrado */
 .btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 15px 30px;
   background-color: #0073b1;
   color: white;
   text-transform: uppercase;
@@ -59,56 +83,43 @@ p {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  text-align: center;
-  margin-top: 20px; /* Espacio entre el botón y el párrafo */
+  margin-top: 20px;
 }
 
 .btn:hover {
   background-color: #005983;
 }
 
-/* Secciones */
+/* Secciones con más espacio */
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-p,
-ol {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* Grid para tecnologías */
+/* Diseño de dos columnas para tecnologías */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-bottom: 40px;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  gap: 40px; /* Mayor separación entre columnas */
+  margin-bottom: 60px;
 }
 
 .tech-item {
   background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 12px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tech-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
   color: #0073b1;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
+  margin-top: 60px;
+  font-size: 1rem;
   color: #888;
 }
