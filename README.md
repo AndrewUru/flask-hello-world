@@ -55,7 +55,7 @@ Contribuir
 
 Este es un proyecto open source y me encantaría contar con la colaboración de la comunidad. Si te interesa contribuir, revisa las issues abiertas o crea una nueva pull request. Estoy abierto a ideas y mejoras.
 
-Repositorio en GitHub: Tu perfil de GitHub
+
 
 Estado del proyecto
 
