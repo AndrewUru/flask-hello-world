@@ -5,125 +5,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio - LinkedIn Ad Library</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Alpine.js para manejar la interacción del menú hamburguesa -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js" defer></script>
 </head>
 
-<body>
-  <!-- Menú de navegación -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/about">Sobre la herramienta</a></li>
-      <li><a href="/example">Página de ejemplo</a></li>
-      <li><a href="/login">Iniciar sesión con LinkedIn</a></li>
-    </ul>
-  </nav>
-  <div class="container">
+<body class="bg-gray-100 text-gray-800">
 
-    <header>
-      <h1>LinkedIn Ad Library Viewer</h1>
-      <p>Visualiza anuncios publicados en LinkedIn utilizando la API de LinkedIn, Flask y Python.</p>
-      <a class="btn" href="/login">Iniciar sesión con LinkedIn</a>
+  <!-- Menú de navegación responsive -->
+  <nav class="bg-blue-600" x-data="{ open: false }">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-white text-xl font-bold">
+        <a href="/" class="block text-center md:text-left">LinkedIn Ad Library</a>
+      </div>
+
+      <!-- Botón hamburguesa (solo visible en pantallas pequeñas) -->
+      <div class="md:hidden">
+        <button @click="open = !open" class="text-white focus:outline-none" aria-label="Toggle menu">
+          <!-- Ícono de menú hamburguesa -->
+          <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <!-- Ícono de cerrar -->
+          <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div :class="{ 'block': open, 'hidden': !open }" class="w-full md:flex md:items-center md:w-auto hidden">
+        <ul class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 items-center">
+          <li><a href="/" class="text-white text-lg font-semibold hover:underline">Inicio</a></li>
+          <li><a href="/about" class="text-white text-lg font-semibold hover:underline">Sobre la herramienta</a></li>
+          <li><a href="/example" class="text-white text-lg font-semibold hover:underline">Página de ejemplo</a></li>
+          <li><a href="/login" class="text-white text-lg font-semibold hover:underline">Iniciar sesión con LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto mt-12 p-8 bg-white shadow-lg rounded-lg">
+
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-blue-600 mb-4">LinkedIn Ad Library Viewer</h1>
+      <p class="text-lg text-gray-600">Visualiza anuncios publicados en LinkedIn utilizando la API de LinkedIn, Flask y
+        Python.</p>
+      <a class="btn bg-blue-600 text-white py-2 px-6 rounded-lg mt-4 inline-block hover:bg-blue-700 transition"
+        href="/login">Iniciar sesión con LinkedIn</a>
     </header>
 
     <main>
-
       <!-- Explicación del estado del proyecto -->
-      <section class="section">
-        <h2>Estado actual del proyecto</h2>
-        <p>Por el momento, esperando pacientemente la validación oficial de la aplicación por parte de
-          LinkedIn.
-          Una vez que la aprobación llegue, podrás disfrutar de todas las funciones de <strong>LinkedIn Ad
-            Library Viewer</strong>. 🎉
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Estado actual del proyecto</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Por el momento, esperando pacientemente la validación oficial de la aplicación por parte de LinkedIn.
+          Una vez que la aprobación llegue, podrás disfrutar de todas las funciones de <strong>LinkedIn Ad Library
+            Viewer</strong>. 🎉
         </p>
-
-        <p>Quiero aprovechar esta oportunidad para agradecer de antemano al increíble equipo de LinkedIn por su arduo
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Quiero aprovechar esta oportunidad para agradecer de antemano al increíble equipo de LinkedIn por su arduo
           trabajo y por tomarse el tiempo de revisar la solicitud. Prometemos no acosarlos (demasiado) mientras
           esperamos
-          ⏳. ¡Gracias por su paciencia y dedicación, LinkedIn! 🙌😄</p>
-
-        <p>En cuanto reciba el visto bueno, actualizaré la plataforma para que puedas explorar y analizar anuncios
-          de
-          LinkedIn de una forma simple y eficiente. Hasta entonces... ¡sigan rockeando! 🤘</p>
+          ⏳. ¡Gracias por su paciencia y dedicación, LinkedIn! 🙌😄
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          En cuanto reciba el visto bueno, actualizaré la plataforma para que puedas explorar y analizar anuncios
+          de LinkedIn de una forma simple y eficiente. Hasta entonces... ¡sigan rockeando! 🤘
+        </p>
       </section>
 
-
       <!-- Explicación del proyecto -->
-      <section class="section">
-        <h2>¿De qué se trata este proyecto?</h2>
-        <p>Este proyecto es una aplicación web GRATUITA que utiliza varias tecnologías modernas para permitir a los
-          usuarios ver
-          datos de anuncios publicados en LinkedIn. A través de la autenticación OAuth, los usuarios pueden iniciar
-          sesión con LinkedIn, y luego acceder a la biblioteca de anuncios usando la API de LinkedIn Ad Library.</p>
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">¿De qué se trata este proyecto?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Este proyecto es una aplicación web GRATUITA que utiliza varias tecnologías modernas para permitir a los
+          usuarios ver datos de anuncios publicados en LinkedIn. A través de la autenticación OAuth, los usuarios pueden
+          iniciar
+          sesión con LinkedIn, y luego acceder a la biblioteca de anuncios usando la API de LinkedIn Ad Library.
+        </p>
       </section>
 
       <!-- Tecnologías utilizadas -->
-      <section class="section">
-        <h2>Tecnologías utilizadas</h2>
-        <div class="tech-grid">
-          <div class="tech-item">
-            <h3>Python</h3>
-            <p>Python es el lenguaje de programación principal utilizado en este proyecto. La aplicación está construida
-              con Flask, un micro-framework de Python para aplicaciones web.</p>
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Tecnologías utilizadas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">Python</h3>
+            <p class="text-gray-600">Python es el lenguaje de programación principal utilizado en este proyecto. La
+              aplicación está construida con Flask, un micro-framework de Python para aplicaciones web.</p>
           </div>
-          <div class="tech-item">
-            <h3>Flask</h3>
-            <p>Flask se utiliza para manejar las rutas, autenticación y la lógica backend. Permite la integración con la
-              API de LinkedIn y procesa las solicitudes de los usuarios.</p>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">Flask</h3>
+            <p class="text-gray-600">Flask se utiliza para manejar las rutas, autenticación y la lógica backend. Permite
+              la integración con la API de LinkedIn y procesa las solicitudes de los usuarios.</p>
           </div>
-          <div class="tech-item">
-            <h3>API de LinkedIn</h3>
-            <p>La API de LinkedIn Ad Library permite acceder a datos de anuncios publicados en LinkedIn. A través de
-              OAuth, los usuarios pueden autenticar su cuenta y acceder a esta información.</p>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">API de LinkedIn</h3>
+            <p class="text-gray-600">La API de LinkedIn Ad Library permite acceder a datos de anuncios publicados en
+              LinkedIn. A través de OAuth, los usuarios pueden autenticar su cuenta y acceder a esta información.</p>
           </div>
-          <div class="tech-item">
-            <h3>Next.js</h3>
-            <p>Next.js es un framework de React que se utiliza en la parte del frontend para manejar el contenido
-              dinámico y las interfaces del usuario de forma rápida y eficiente.</p>
-          </div>
-          <div class="tech-item">
-            <h3>OAuth 2.0</h3>
-            <p>El protocolo de autenticación OAuth 2.0 se usa para permitir a los usuarios iniciar sesión en LinkedIn de
-              manera segura, proporcionando un token de acceso para interactuar con la API.</p>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">OAuth 2.0</h3>
+            <p class="text-gray-600">El protocolo de autenticación OAuth 2.0 se usa para permitir a los usuarios iniciar
+              sesión en LinkedIn de manera segura, proporcionando un token de acceso para interactuar con la API.</p>
           </div>
         </div>
       </section>
 
       <!-- Explicación del potencial de la herramienta -->
-      <section class="section">
-        <h2>El Potencial de LinkedIn Ad Library Viewer</h2>
-        <p>Esta herramienta tiene el poder de transformar la manera en que interactuamos con los anuncios publicados en
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">El Potencial de LinkedIn Ad Library Viewer</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Esta herramienta tiene el poder de transformar la manera en que interactuamos con los anuncios publicados en
           LinkedIn.
           Desde la obtención de datos cruciales sobre campañas publicitarias hasta el análisis detallado del impacto de
           cada
-          anuncio,
-          esta aplicación te permite explorar la biblioteca de anuncios de LinkedIn de una manera simple, eficiente y
-          organizada.</p>
-
+          anuncio, esta aplicación te permite explorar la biblioteca de anuncios de LinkedIn de una manera simple,
+          eficiente y organizada.
+        </p>
       </section>
 
       <!-- Cómo funciona la autenticación -->
-      <section class="section">
-        <h2>¿Cómo funciona la autenticación con LinkedIn?</h2>
-        <p>Este proyecto utiliza OAuth 2.0 para la autenticación. Los usuarios son redirigidos a la página de LinkedIn,
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">¿Cómo funciona la autenticación con LinkedIn?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Este proyecto utiliza OAuth 2.0 para la autenticación. Los usuarios son redirigidos a la página de LinkedIn,
           donde deben otorgar permisos para acceder a la información de su cuenta. Una vez autenticado, LinkedIn
-          devuelve un token de acceso que se utiliza para realizar solicitudes autenticadas a la API de LinkedIn.</p>
+          devuelve un token de acceso que se utiliza para realizar solicitudes autenticadas a la API de LinkedIn.
+        </p>
       </section>
 
       <!-- Cómo utilizar la aplicación -->
-      <section class="section bg">
-        <h2>Cómo utilizar la aplicación</h2>
-        <p>Para comenzar, haz clic en "Iniciar sesión con LinkedIn". Una vez autenticado, podrás visualizar los anuncios
-          publicados en LinkedIn.</p>
-        <a class="btn" href="/login">Iniciar sesión con LinkedIn</a>
+      <section class="bg-blue-50 p-6 rounded-lg shadow-md text-center">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Cómo utilizar la aplicación</h2>
+        <p class="text-gray-600 mb-4">Para comenzar, haz clic en "Iniciar sesión con LinkedIn". Una vez autenticado,
+          podrás visualizar los anuncios publicados en LinkedIn.</p>
+        <a class="btn bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition" href="/login">Iniciar
+          sesión con LinkedIn</a>
       </section>
     </main>
 
-    <footer>
+    <footer class="text-center py-6 text-gray-600 mt-8">
       <p>&copy; 2024 LinkedIn Ad Library Viewer. Proyecto desarrollado por Andrés Tobío con Python, Flask, y la API de
         LinkedIn.</p>
     </footer>
   </div>
+
 </body>
 
 </html>
