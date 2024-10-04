@@ -1,28 +1,71 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+---
+Flask Hello World
 
-# Flask + Vercel
+Este es un proyecto simple de "Hello World" utilizando Python y Flask. Ha sido desplegado en Vercel y está integrado con la API de LinkedIn.
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+Descripción
 
-## Demo
+Esta aplicación permite a los usuarios conectarse con su cuenta de LinkedIn para recibir sugerencias y estadísticas personalizadas. Aunque aún estamos esperando la aprobación del equipo de LinkedIn para la integración total, la aplicación está disponible para su prueba en el siguiente enlace:
 
-https://flask-python-template.vercel.app/
+URL de la aplicación: https://flask-hello-world-three-ecru.vercel.app/
 
-## How it Works
+Funcionalidades
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+Análisis de red en LinkedIn.
 
-## Running Locally
+Recomendaciones de conexión personalizadas.
 
-```bash
-npm i -g vercel
-vercel dev
-```
+Estadísticas sobre la actividad de la cuenta de LinkedIn.
 
-Your Flask application is now available at `http://localhost:3000`.
 
-## One-Click Deploy
+Instalación
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+Para ejecutar este proyecto localmente, sigue estos pasos:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+1. Clona el repositorio:
+
+git clone https://github.com/AndrewUru/flask-hello-world.git
+
+
+2. Navega al directorio del proyecto:
+
+cd flask-hello-world
+
+
+3. Crea un entorno virtual:
+
+python3 -m venv venv
+source venv/bin/activate
+
+
+4. Instala las dependencias necesarias:
+
+pip install -r requirements.txt
+
+
+5. Ejecuta la aplicación:
+
+flask run
+
+
+
+La aplicación estará disponible en http://127.0.0.1:5000/.
+
+Contribuir
+
+Este es un proyecto open source y me encantaría contar con la colaboración de la comunidad. Si te interesa contribuir, revisa las issues abiertas o crea una nueva pull request. Estoy abierto a ideas y mejoras.
+
+Repositorio en GitHub: Tu perfil de GitHub
+
+Estado del proyecto
+
+Actualmente estamos a la espera de la autorización de LinkedIn para la integración con su API.
+
+Créditos
+
+Desarrollado por AndrewUru.
+
+
+---
+
+
