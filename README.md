@@ -1,4 +1,4 @@
----
+
 Flask Hello World
 
 Este es un proyecto simple de "Hello World" utilizando Python y Flask. Ha sido desplegado en Vercel y está integrado con la API de LinkedIn.
@@ -55,7 +55,7 @@ Contribuir
 
 Este es un proyecto open source y me encantaría contar con la colaboración de la comunidad. Si te interesa contribuir, revisa las issues abiertas o crea una nueva pull request. Estoy abierto a ideas y mejoras.
 
-Repositorio en GitHub: Tu perfil de GitHub
+
 
 Estado del proyecto
 
@@ -66,6 +66,5 @@ Créditos
 Desarrollado por AndrewUru.
 
 
----
 
 
